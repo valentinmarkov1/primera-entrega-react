@@ -1,24 +1,18 @@
+import React from 'react'
+import Nav from './components/Nav/Nav'
+import Boton from './components/header/CartsWidget'
+import Contador from './components/Contador/Contador'
+// import ItemList from './components/ItemListContainer/ItemList'
 
-import './App.css';
-import Navbar from './components/NavBar';
-function App() {
-  
-
+ const App = () => {
   return (
-
-      <div>
-        
-        <h2></h2>
-        <Navbar></Navbar>
-        
-      </div>
-
+    <div>
+      <Nav></Nav>
+      <Boton></Boton>
+      <Contador></Contador>
+      {/* <ItemList></ItemList> */}
+    </div>
   )
-
-
-
-  
-
 }
 
-export default App;
+export default App

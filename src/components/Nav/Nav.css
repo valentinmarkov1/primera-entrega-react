@@ -1,0 +1,12 @@
+
+.contenedornav{
+    width: 100%px;
+    height: 100px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.149);
+  }
+  a{
+    font-size: 20px;
+    margin-left: 100px;
+    
+  }
