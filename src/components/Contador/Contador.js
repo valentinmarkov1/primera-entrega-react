@@ -17,7 +17,7 @@ const Contador = () => {
 
     return (
         <div className='ContenedorContador'>
-            <h2>Contador</h2>
+            <h2>Nuestro Stock</h2>
             <hr></hr>
             <button onClick={restar} className="btn btn-outline-primary">-</button>
             <span className="mx-2">{counter}</span>
