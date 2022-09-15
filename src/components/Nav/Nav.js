@@ -1,18 +1,19 @@
-import './Nav.css';
+import './Nav.css'; 
+import { Link } from 'react-router-dom';
 const nav = () => {
 
   return (
 
     <div className="contenedornav">
       <>
-        <h1>Navegador de la ap</h1>
+        <Link to="/"><h1>Navegador de la ap</h1></Link>
 
         <div className='contenedorlinks'>
 
           <nav>
-            <a>link 1</a>
-            <a>link 2</a>
-            <a>link 3</a>
+            <Link to="/productos/remeras">Remeras</Link>
+            <Link to="/productos/zapatillas">Zapatillas</Link>
+            <Link to="/productos/gorros">Gorros</Link>
           </nav>
         </div>
       </>

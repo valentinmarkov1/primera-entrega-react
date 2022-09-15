@@ -3,14 +3,16 @@
     width: 100%px;
     height: 100px;
     display:flex;
+    align-items: center;
+    justify-content: space-around;
     background-color: rgba(245, 185, 136, 0.702);
+   
   }
   a{
     font-size: 20px;
     margin-left: 100px;
-  
+    font-size: 27px;
+    
   }
 
-  h1{
-    color: rgba(235, 48, 35, 0.793);
-  }
+ 
