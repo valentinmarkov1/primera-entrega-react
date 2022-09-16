@@ -1,8 +1,8 @@
 export const stock = [
     {
         id: 1,
-        nombre: "producto 1",
-        precio: "1000",
+        nombre: "Producto 1",
+        precio: "$1000",
         img: 'https://via.placeholder.com/250',
         stock: 50,
         desc: 'Gran Producto',
@@ -11,8 +11,8 @@ export const stock = [
     },
     {
         id: 2,
-        nombre: "producto 2",
-        precio: "2000",
+        nombre: "Producto 2",
+        precio: "$2000",
         img: 'https://via.placeholder.com/250',
         stock: 50,
         desc: 'Gran Producto',
@@ -20,8 +20,8 @@ export const stock = [
     },
     {
         id: 3,
-        nombre: "producto 3",
-        precio: "1200",
+        nombre: "Producto 3",
+        precio: "$1200",
         img:'https://via.placeholder.com/250',
         stock: 50,
         desc: 'Gran Producto',
@@ -29,8 +29,8 @@ export const stock = [
     },
     {
         id: 4,
-        nombre: "producto 4",
-        precio: "800",
+        nombre: "Producto 4",
+        precio: "$800",
         img: 'https://via.placeholder.com/250',
         stock: 50,
         desc: 'Gran Producto',

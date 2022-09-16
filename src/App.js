@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 // import Contacto from './components/Contacto/Contacto'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
+
 const App = () => {
 
   return (
@@ -22,7 +23,7 @@ const App = () => {
         <Route path='/' element={<ItemListContainer></ItemListContainer>} />
         <Route path='*' element ={<Navigate to = "/"/>} />
         <Route path='/item/:itemId' element= {<ItemDetailContainer/>}/>
-        {/* <Route path='/Nosotros' element={<Nosotros></Nosotros>} ></Route>
+       {/* <Route path='/Nosotros' element={<Nosotros></Nosotros>} ></Route>
         <Route path='/Contacto' element={<Contacto></Contacto>}></Route> */}
       </Routes>
       {/* <Boton></Boton> */}

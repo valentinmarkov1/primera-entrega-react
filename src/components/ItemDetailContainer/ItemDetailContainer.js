@@ -1,6 +1,7 @@
 import { useEffect,useState } from 'react'
 import{pedirDatos} from '../../Datos/PedirDatos'
 import {useParams} from'react-router-dom'
+import ItemDetail from '../ItemDetail/ItemDetail'
 
 export const ItemDetailContainer = () => {
     
@@ -21,7 +22,7 @@ export const ItemDetailContainer = () => {
             setLoading(false)
         })
 
-  }, [])
+  }, [itemId])
     
 return(
     <div>
@@ -29,7 +30,7 @@ return(
             
             loading
              ?<h2>Cargando...</h2>
-             : <itemDetail item={item}/>
+             : <ItemDetail item = {item}/>
         }
 
 
