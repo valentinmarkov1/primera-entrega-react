@@ -14,6 +14,8 @@ const nav = () => {
             <Link to="/productos/remeras">Remeras</Link>
             <Link to="/productos/zapatillas">Zapatillas</Link>
             <Link to="/productos/gorros">Gorros</Link>
+            <Link to="/Nosotros/">Nosotros</Link>
+            <Link to="/Contacto/">Contacto</Link>
           </nav>
         </div>
       </>

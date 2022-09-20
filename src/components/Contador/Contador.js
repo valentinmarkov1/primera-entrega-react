@@ -1,27 +1,45 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-const Contador = () => {
+const Contador = ({max,counter,setCounter, handleAgregar}) => {
 
-    const [counter, setCounter] = useState(0)
+   
 
+    const handleRestar = () => {
+        if (counter > 1) {
+            setCounter(counter - 1)
 
-    const sumar = () => {
-        setCounter (counter + 1)
-        console.log(counter)
+        }
+
     }
-        const restar = () => {
-        setCounter (counter - 1)
-        console.log(counter)
-    }
+  
 
+    const handleSumar = () => {
+        if (counter < max){ 
+
+            setCounter(counter + 1)
+        }
+    }
+    //     if (counter < 10){
+
+    //         setCounter(counter + 1)
+    //     }
+    // }
+        
 
     return (
         <div className='ContenedorContador'>
-            <h2>Nuestro Stock</h2>
             <hr></hr>
-            <button onClick={restar} className="btn btn-outline-primary">-</button>
+            <button onClick={handleRestar} className="btn btn-outline-primary">-</button>
             <span className="mx-2">{counter}</span>
-            <button onClick={sumar} className="btn btn-outline-primary">+</button>
+            <button onClick={handleSumar} className="btn btn-primary">+</button>
+            <br/>
+            <br/>
+            <br/>
+
+            <button onClick={handleAgregar} className='btn btn-success'>
+                Agregar al Carrito
+            </button>
+       
         </div>
 
 
