@@ -28,18 +28,14 @@ const Contador = ({max,counter,setCounter, handleAgregar}) => {
 
     return (
         <div className='ContenedorContador'>
-            <hr></hr>
-            <button onClick={handleRestar} className="btn btn-outline-primary">-</button>
+           <button onClick={handleRestar} className="btn btn-outline-primary">-</button>
             <span className="mx-2">{counter}</span>
             <button onClick={handleSumar} className="btn btn-primary">+</button>
-            <br/>
-            <br/>
-            <br/>
-
+            
+            <hr/>
             <button onClick={handleAgregar} className='btn btn-success'>
                 Agregar al Carrito
             </button>
-       
         </div>
 
 

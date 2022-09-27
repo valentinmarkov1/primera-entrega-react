@@ -1,6 +1,9 @@
 import Contador from "../Contador/Contador"
 import Select from "../Talles/Select"
-import {useState} from "react"
+import React, { useState,useContext } from "react"
+import {CartContext} from "../../Context/CartContext"
+import { Link } from "react-router-dom"
+
 
 // const options= [{
 //     value: 'L',
@@ -21,8 +24,11 @@ import {useState} from "react"
 
 const ItemDetail = ({ item }) => {
 
-    const [cantidad, setCantidad] = useState(1)
+    const {cart,addToCart,isInCart} = useContext (CartContext)
+    console.log (cart)
     
+    
+    const [cantidad, setCantidad] = useState(1)
     const [talle, setTalle]=useState (item.options[0].value)
     const [color, setColor]=useState (item.options[0].value)
 
@@ -35,13 +41,11 @@ const ItemDetail = ({ item }) => {
             color,
             cantidad
         }
-
-        console.log (itemToCart)
-        // console.log({
-        //     ...item,
-        //     cantidad
-        // })
-
+        //No funciona el Slice(no reconoce que este definido)
+            // const newCart = cart.slice()
+            // newCart.push(itemToCart) 
+           
+            addToCart(itemToCart)
     }
 
     return (
@@ -53,15 +57,24 @@ const ItemDetail = ({ item }) => {
             <p> {item.category}</p>
             <p>Stock: {item.stock}</p>
             {/* <button className="btn btn-primary mx-2">Ver Mas</button> */}
-            <hr/>
+            {/* <hr/> */}
             <Select options={item.options} onSelect={setTalle}  /> 
             <Select options={item.color} onSelect={setColor}  /> 
-            <Contador max={item.stock} counter={cantidad}
-            setCounter={setCantidad}
-            handleAgregar={handleAgregar} />
+            <hr/>
+            {
+                isInCart (item.id)
+                ?  <Link to= {"/Cart"} className="btn btn-success my-0 mx-0">Terminar mi Compra</Link>
+                :  <Contador 
+                max={item.stock} counter={cantidad}
+                setCounter={setCantidad}
+                handleAgregar={handleAgregar} 
+                />
+              
+            }
         </div>
     )
 
 
-}
+} 
+
 export default ItemDetail

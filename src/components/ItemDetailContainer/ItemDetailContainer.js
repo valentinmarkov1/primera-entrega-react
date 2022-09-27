@@ -10,10 +10,7 @@ export const ItemDetailContainer = () => {
     const {itemId} = useParams ()
     const [loading,setLoading] = useState (true)
     
-    console.log(itemId)  
-    console.log(item)
-
-    useEffect (() =>{
+        useEffect (() =>{
         pedirDatos()
         .then((res) =>{
             setItem(res.find((prod) => prod.id === Number (itemId)))
