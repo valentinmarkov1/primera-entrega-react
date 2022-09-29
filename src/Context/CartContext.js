@@ -11,25 +11,31 @@ const addToCart = (item) => {
 }
 
 const isInCart = (id) => {
-      return cart.find((item)=> item.id === id) 
+      return cart.some((item)=> item.id === id) 
 }
 
 const cartQuantity = () => {
-  return cart.reduce (( acc,item )=> acc + item.cantidad, 0 )
+        return  cart.reduce (( acc,item) => acc + item.cantidad,0 ) 
 }
 
 const cartTotal = () => {
-    return cart.reduce (( acc,item) => acc + item.cantidad * item.precio, 0)
+    return cart.reduce(( acc,item) => acc + item.cantidad * item.precio, 0)
 
     
-}   
+} 
+
+const emptyCart = () => {
+    setCart({})
+}
+
     return (
         <CartContext.Provider value = {{
             cart, 
             addToCart,
             isInCart, 
             cartQuantity, 
-            cartTotal
+            cartTotal,
+            emptyCart
         }}>
             {children}
         </CartContext.Provider>

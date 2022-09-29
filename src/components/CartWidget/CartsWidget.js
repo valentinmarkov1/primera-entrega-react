@@ -11,7 +11,7 @@ const {cartQuantity}= useContext (CartContext)
     return (
     <Link to = "/cart">
         <BsFillCartPlusFill/>
-        <spam>{cartQuantity()}</spam>
+        <span>{cartQuantity()}</span>
     </Link>
   )
 }

@@ -3,7 +3,7 @@ import { CartContext } from "../../Context/CartContext"
 
 const Cart = () => {
 
-  const { cart,cartTotal } = useContext(CartContext)
+  const { cart,cartTotal,emptyCart } = useContext(CartContext)
 
 
   return (
@@ -27,6 +27,7 @@ const Cart = () => {
       ))}
 
       <h4>Total:${cartTotal()} </h4>
+      <button onClick={emptyCart} className="btn btn-danger" >Vaciar Carrito</button>
     </div>
 
   )
