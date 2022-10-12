@@ -28,7 +28,7 @@ const ItemDetail = ({ item }) => {
     console.log (cart)
     
     
-    const [cantidad, setCantidad] = useState(1)
+    const [cantidad, setCantidad] = useState(0)
     const [talle, setTalle]=useState (item.options[0].value)
     const [color, setColor]=useState (item.options[0].value)
 

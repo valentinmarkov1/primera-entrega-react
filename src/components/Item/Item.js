@@ -10,10 +10,14 @@ const Item = ({producto}) => {
         <p>Precio: {producto.precio}</p>
         <small>Stock disponible: {producto.stock}</small>
         <p>{producto.desc}</p>
-        <Link to= {'/item/'+producto.id}className="btn btn-primary mx-1 my-3">Ver Mas</Link>
-        {/* <button className="btn btn-primary my-3" 
-          onClick={() => history(`/item/${producto.id}`)}> Ver Mas</button> */}
+        {
+          producto.stock > 0
+          ? <Link to= {'/item/'+producto.id}className="btn btn-primary mx-1 my-3">Ver Mas</Link>
+          : <p className="btn btn-outline-danger "> No hay stock de este producto</p>
 
+        }
+        {/* // <button className="btn btn-primary my-3" 
+          onClick={() => history(`/item/${producto.id}`)}> Ver Mas</button> */}
     </div>
   )
 }
